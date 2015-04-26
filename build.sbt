@@ -13,5 +13,5 @@ libraryDependencies ++= Seq(
   "com.typesafe.play" %% "play-json" % "2.4.0-M2",
   "org.scalafx" %% "scalafx" % "8.0.20-R6",
   "org.scalafx" %% "scalafxml-core-sfx8" % "0.2.2",
-  "me.mtrupkin.console" %% "console-core" % "0.7-SNAPSHOT"
+  "me.mtrupkin.console" %% "console-core" % "0.8-SNAPSHOT"
 )
