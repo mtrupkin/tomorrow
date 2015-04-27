@@ -26,6 +26,8 @@ trait Game { self: Controller =>
   class GameController(val world: World) extends ControllerState {
     val name = "Game"
 
+    @FXML var label1: Label = _
+    @FXML var label2: Label = _
     @FXML var targetNameText: Label = _
     @FXML var targetActionText: Label = _
     @FXML var targetDescriptionText: Label = _
@@ -66,6 +68,8 @@ trait Game { self: Controller =>
 
       console.draw(screen)
 
+      label1.setText(s"${world.home.store}")
+
     }
 
     implicit def itos(int: Int): String = int.toString
@@ -82,6 +86,8 @@ trait Game { self: Controller =>
 
     def updateMouseInfo(w: Point): Unit = {
       targetPositionText.setText(s"${w.x}:${w.y}")
+      label2.setText(s"${world(w).cost}")
+
     }
 
     def updateActionText(name: String, description: String): Unit = {
